@@ -1,0 +1,232 @@
+Settings:
+  Output files: "7/ssn.*.bt2"
+  Line rate: 6 (line is 64 bytes)
+  Lines per side: 1 (side is 64 bytes)
+  Offset rate: 4 (one in 16)
+  FTable chars: 10
+  Strings: unpacked
+  Max bucket size: default
+  Max bucket size, sqrt multiplier: default
+  Max bucket size, len divisor: 4
+  Difference-cover sample period: 1024
+  Endianness: little
+  Actual local endianness: little
+  Sanity checking: disabled
+  Assertions: disabled
+  Random seed: 0
+  Sizeofs: void*:8, int:4, long:8, size_t:8
+Input files DNA, FASTA:
+  insert.6.fa
+Warning: Empty fasta file: 'insert.6.fa'
+Warning: All fasta inputs were empty
+Total time for call to driver() for forward index: 00:00:00
+Error: Encountered internal Bowtie 2 exception (#1)
+Command: bowtie2-build --wrapper basic-0 -f insert.6.fa 7/ssn 
+Could not locate a Bowtie index corresponding to basename "7/ssn"
+Error: Encountered internal Bowtie 2 exception (#1)
+Command: /panfs/roc/itascasoft/bowtie2/2.2.4_gcc-4.9.2_haswell/bowtie2-align-s --wrapper basic-0 -p 6 -x 7/ssn --no-hd --no-sq --passthrough -1 L007_R1.fq -2 L007_R2.fq 
+(ERR): bowtie2-align exited with value 1
+Could not locate a Bowtie index corresponding to basename "7/ssn"
+Error: Encountered internal Bowtie 2 exception (#1)
+Command: /panfs/roc/itascasoft/bowtie2/2.2.4_gcc-4.9.2_haswell/bowtie2-align-s --wrapper basic-0 -p 6 -x 7/ssn --no-hd --no-sq --passthrough -1 L008_R1.fq -2 L008_R2.fq 
+(ERR): bowtie2-align exited with value 1
+/panfs/roc/itascasoft/openmpi/el6/1.8.5/intel-2015-update3/bin/mpirun -np 6 ABYSS-P -k40 -q3    --coverage-hist=coverage.hist -s ne234-bubbles.fa  -o ne234-1.fa r1.fq r2.fq 
+ABySS 1.9.0
+ABYSS-P -k40 -q3 --coverage-hist=coverage.hist -s ne234-bubbles.fa -o ne234-1.fa r1.fq r2.fq
+Running on 6 processors
+0: Running on host cn0597
+1: Running on host cn0597
+2: Running on host cn0597
+3: Running on host cn0597
+4: Running on host cn0597
+5: Running on host cn0597
+0: Reading `r1.fq'...
+r1.fq:0: warning: file is empty
+warning: `r1.fq': contains no usable sequence
+r2.fq:0: warning: file is empty
+1: Reading `r2.fq'...
+warning: `r2.fq': contains no usable sequence
+ABYSS-P: NetworkSequenceCollection.cpp:92: void NetworkSequenceCollection::run(): Assertion `!m_data.empty()' failed.
+[cn0597:12526] *** Process received signal ***
+ABYSS-P: NetworkSequenceCollection.cpp:461: void NetworkSequenceCollection::runControl(): Assertion `!m_data.empty() || opt::numProc >= DEDICATE_CONTROL_AT' failed.
+[cn0597:12525] *** Process received signal ***
+[cn0597:12525] Signal: Aborted (6)
+[cn0597:12525] Signal code:  (-6)
+ABYSS-P: NetworkSequenceCollection.cpp:92: void NetworkSequenceCollection::run(): Assertion `!m_data.empty()' failed.
+ABYSS-P: NetworkSequenceCollection.cpp:92: void NetworkSequenceCollection::run(): Assertion `!m_data.empty()' failed.
+[cn0597:12528] *** Process received signal ***
+[cn0597:12528] Signal: Aborted (6)
+[cn0597:12528] Signal code:  (-6)
+ABYSS-P: NetworkSequenceCollection.cpp:92: void NetworkSequenceCollection::run(): Assertion `!m_data.empty()' failed.
+[cn0597:12529] *** Process received signal ***
+[cn0597:12529] Signal: Aborted (6)
+[cn0597:12529] Signal code:  (-6)
+ABYSS-P: NetworkSequenceCollection.cpp:92: void NetworkSequenceCollection::run(): Assertion `!m_data.empty()' failed.
+[cn0597:12530] *** Process received signal ***
+[cn0597:12530] Signal: Aborted (6)
+[cn0597:12530] Signal code:  (-6)
+[cn0597:12526] Signal: Aborted (6)
+[cn0597:12526] Signal code:  (-6)
+[cn0597:12527] *** Process received signal ***
+[cn0597:12527] Signal: Aborted (6)
+[cn0597:12527] Signal code:  (-6)
+0: Loaded 0 k-mer.
+5: Loaded 0 k-mer.
+1: Loaded 0 k-mer.
+2: Loaded 0 k-mer.
+3: Loaded 0 k-mer.
+4: Loaded 0 k-mer.
+[cn0597:12525] [ 0] [cn0597:12530] [ 0] [cn0597:12527] [ 0] [cn0597:12526] [ 0] [cn0597:12528] [ 0] [cn0597:12529] [ 0] /lib64/libc.so.6[0x3260c326a0]
+[cn0597:12530] [ 1] /lib64/libc.so.6[0x3260c326a0]
+[cn0597:12527] [ 1] /lib64/libc.so.6[0x3260c326a0]
+[cn0597:12526] [ 1] /lib64/libc.so.6[0x3260c326a0]
+[cn0597:12528] [ 1] /lib64/libc.so.6[0x3260c326a0]
+[cn0597:12529] [ 1] /lib64/libc.so.6[0x3260c326a0]
+[cn0597:12525] [ 1] /lib64/libc.so.6(gsignal+0x35)[0x3260c32625]
+[cn0597:12525] [ 2] /lib64/libc.so.6(gsignal+0x35)[0x3260c32625]
+[cn0597:12530] [ 2] /lib64/libc.so.6(gsignal+0x35)[0x3260c32625]
+[cn0597:12527] [ 2] /lib64/libc.so.6(gsignal+0x35)[0x3260c32625]
+[cn0597:12528] [ 2] /lib64/libc.so.6(abort+0x175)[0x3260c33e05]
+[cn0597:12528] [ 3] /lib64/libc.so.6(abort+0x175)[0x3260c33e05]
+[cn0597:12525] [ 3] /lib64/libc.so.6[0x3260c2b74e]
+[cn0597:12525] [ 4] /lib64/libc.so.6(abort+0x175)[0x3260c33e05]
+[cn0597:12530] [ 3] /lib64/libc.so.6[0x3260c2b74e]
+[cn0597:12530] [ 4] /lib64/libc.so.6(gsignal+0x35)[0x3260c32625]
+[cn0597:12526] [ 2] /lib64/libc.so.6(abort+0x175)[0x3260c33e05]
+[cn0597:12526] [ 3] /lib64/libc.so.6[0x3260c2b74e]
+[cn0597:12526] [ 4] /lib64/libc.so.6(abort+0x175)[0x3260c33e05]
+[cn0597:12527] [ 3] /lib64/libc.so.6[0x3260c2b74e]
+[cn0597:12527] [ 4] /lib64/libc.so.6(gsignal+0x35)[0x3260c32625]
+[cn0597:12529] [ 2] /lib64/libc.so.6(abort+0x175)[0x3260c33e05]
+[cn0597:12529] [ 3] /lib64/libc.so.6[0x3260c2b74e]
+[cn0597:12529] [ 4] /lib64/libc.so.6[0x3260c2b74e]
+[cn0597:12528] [ 4] /lib64/libc.so.6(__assert_perror_fail+0x0)[0x3260c2b810]
+[cn0597:12528] [ 5] ABYSS-P[0x416be9]
+[cn0597:12528] [ 6] ABYSS-P[0x406e95]
+[cn0597:12528] [ 7] /lib64/libc.so.6(__assert_perror_fail+0x0)[0x3260c2b810]
+[cn0597:12525] [ 5] ABYSS-P[0x41598e]
+[cn0597:12525] [ 6] ABYSS-P[0x4066d6]
+[cn0597:12525] [ 7] /lib64/libc.so.6(__libc_start_main+0xfd)[0x3260c1ed5d]
+[cn0597:12525] [ 8] ABYSS-P[0x4056c9]
+[cn0597:12525] *** End of error message ***
+/lib64/libc.so.6(__assert_perror_fail+0x0)[0x3260c2b810]
+[cn0597:12530] [ 5] ABYSS-P[0x416be9]
+[cn0597:12530] [ 6] ABYSS-P[0x406e95]
+[cn0597:12530] [ 7] /lib64/libc.so.6(__libc_start_main+0xfd)[0x3260c1ed5d]
+[cn0597:12530] [ 8] ABYSS-P[0x4056c9]
+[cn0597:12530] *** End of error message ***
+/lib64/libc.so.6(__assert_perror_fail+0x0)[0x3260c2b810]
+[cn0597:12527] [ 5] ABYSS-P[0x416be9]
+[cn0597:12527] [ 6] ABYSS-P[0x406e95]
+[cn0597:12527] [ 7] /lib64/libc.so.6(__libc_start_main+0xfd)[0x3260c1ed5d]
+[cn0597:12527] [ 8] ABYSS-P[0x4056c9]
+[cn0597:12527] *** End of error message ***
+/lib64/libc.so.6(__assert_perror_fail+0x0)[0x3260c2b810]
+[cn0597:12526] [ 5] ABYSS-P[0x416be9]
+[cn0597:12526] [ 6] ABYSS-P[0x406e95]
+[cn0597:12526] [ 7] /lib64/libc.so.6(__libc_start_main+0xfd)[0x3260c1ed5d]
+[cn0597:12526] [ 8] ABYSS-P[0x4056c9]
+[cn0597:12526] *** End of error message ***
+/lib64/libc.so.6(__assert_perror_fail+0x0)[0x3260c2b810]
+[cn0597:12529] [ 5] ABYSS-P[0x416be9]
+[cn0597:12529] [ 6] ABYSS-P[0x406e95]
+[cn0597:12529] [ 7] /lib64/libc.so.6(__libc_start_main+0xfd)[0x3260c1ed5d]
+[cn0597:12529] [ 8] ABYSS-P[0x4056c9]
+[cn0597:12529] *** End of error message ***
+/lib64/libc.so.6(__libc_start_main+0xfd)[0x3260c1ed5d]
+[cn0597:12528] [ 8] ABYSS-P[0x4056c9]
+[cn0597:12528] *** End of error message ***
+--------------------------------------------------------------------------
+mpirun noticed that process rank 0 with PID 12525 on node cn0597 exited on signal 6 (Aborted).
+--------------------------------------------------------------------------
+make: *** [ne234-1.fa] Error 134
+Parameters:
+QualTrim: 0
+QualFilter: no filtering
+HardClip: 0
+Min length: 40
+Sample freq: 1
+PE Mode: 1
+Quality scaling: 2
+MinGC: 0
+MaxGC: 1
+Outfile: bb.fastq
+Orphan file: none
+Discarding sequences with ambiguous bases
+Processing pe files r1.fq, r2.fq
+
+Preprocess stats:
+Reads parsed:	0
+Reads kept:	0 (-nan)
+Reads failed primer screen:	0 (-nan)
+Bases parsed:	0
+Bases kept:	0 (-nan)
+Number of incorrectly paired reads that were discarded: 0
+[timer - sga preprocess] wall clock: 0.00s CPU: 0.00s
+index: input file is empty
+Correcting sequencing errors for bb.fastq
+Error: could not open bb.bwt for read
+Building index for reads.ec.k40.fastq in memory using ropebwt
+Error: could not open reads.ec.k40.fastq for read
+Error: could not open reads.ec.k40.bwt for read
+Error: could not open reads.ec.k40.filter.pass.bwt for read
+Building index for merged.k40.fa on disk
+Error: could not open merged.k40.fa for read
+Error: could not open merged.k40.bwt for read
+Error: could not open merged.k40.rmdup.bwt for read
+[timer - sga assemble] wall clock: 0.01s CPU: 0.00s
+[timer - sga assemble] wall clock: 0.01s CPU: 0.00s
+Deleted edges for 0 super repetitive vertices
+Vertices: 0 Edges: 0 Islands: 0 Tips: 0 Monobranch: 0 Dibranch: 0 Simple: 0
+num verts: 0 using 0 bytes (-nan per vert)
+num edges: 0 using 0 bytes (-nan per edge)
+total: 0
+[Stats] Input graph:
+Vertices: 0 Edges: 0 Islands: 0 Tips: 0 Monobranch: 0 Dibranch: 0 Simple: 0
+Removing contained vertices from graph
+[Stats] After removing contained vertices:
+Vertices: 0 Edges: 0 Islands: 0 Tips: 0 Monobranch: 0 Dibranch: 0 Simple: 0
+Trimming bad vertices
+StringGraphTrim: Removed 0 island and 0 dead-end short vertices
+StringGraphTrim: Removed 0 island and 0 dead-end short vertices
+StringGraphTrim: Removed 0 island and 0 dead-end short vertices
+StringGraphTrim: Removed 0 island and 0 dead-end short vertices
+StringGraphTrim: Removed 0 island and 0 dead-end short vertices
+StringGraphTrim: Removed 0 island and 0 dead-end short vertices
+StringGraphTrim: Removed 0 island and 0 dead-end short vertices
+StringGraphTrim: Removed 0 island and 0 dead-end short vertices
+StringGraphTrim: Removed 0 island and 0 dead-end short vertices
+StringGraphTrim: Removed 0 island and 0 dead-end short vertices
+
+[Stats] Graph after trimming:
+Vertices: 0 Edges: 0 Islands: 0 Tips: 0 Monobranch: 0 Dibranch: 0 Simple: 0
+Resolving small repeats
+
+[Stats] After small repeat resolution:
+Vertices: 0 Edges: 0 Islands: 0 Tips: 0 Monobranch: 0 Dibranch: 0 Simple: 0
+
+Performing variation smoothing
+VariationSmoother: Removed 0 simple and 0 complex bubbles
+VariationSmoother: Removed 0 simple and 0 complex bubbles
+VariationSmoother: Removed 0 simple and 0 complex bubbles
+
+[Stats] Final graph:
+Vertices: 0 Edges: 0 Islands: 0 Tips: 0 Monobranch: 0 Dibranch: 0 Simple: 0
+/var/spool/torque/mom_priv/jobs/771366.mesabim3.msi.umn.edu.SC: line 88: /home/fahrenkr/zangx020/work/devel/sga/src/bin/sga-align: No such file or directory
+/var/spool/torque/mom_priv/jobs/771366.mesabim3.msi.umn.edu.SC: line 91: /home/fahrenkr/zangx020/work/devel/sga/src/bin/sga-bam2de.pl: No such file or directory
+/var/spool/torque/mom_priv/jobs/771366.mesabim3.msi.umn.edu.SC: line 94: /home/fahrenkr/zangx020/work/devel/sga/src/bin/sga-astat.py: No such file or directory
+Reading distance estimates from libPE.de
+Error: could not open libPE.de for read
+Graph best: 0
+Graph unique: 1
+Find overlaps: 4
+Deleted edges for 0 super repetitive vertices
+Vertices: 0 Edges: 0 Islands: 0 Tips: 0 Monobranch: 0 Dibranch: 0 Simple: 0
+Num scaffolds: 0
+Num gaps attempted: 0
+Num gaps resolved: 0
+Num gaps resolved by graph walk: 0
+Num graph walks failed because of too many solutions: 0
+Num graph walks failed because of no path: 0
+Num gaps resolved by overlap: 0
+Num overlaps failed: 0
