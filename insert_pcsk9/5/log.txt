@@ -1,0 +1,1262 @@
+Settings:
+  Output files: "5/ssn.*.bt2"
+  Line rate: 6 (line is 64 bytes)
+  Lines per side: 1 (side is 64 bytes)
+  Offset rate: 4 (one in 16)
+  FTable chars: 10
+  Strings: unpacked
+  Max bucket size: default
+  Max bucket size, sqrt multiplier: default
+  Max bucket size, len divisor: 4
+  Difference-cover sample period: 1024
+  Endianness: little
+  Actual local endianness: little
+  Sanity checking: disabled
+  Assertions: disabled
+  Random seed: 0
+  Sizeofs: void*:8, int:4, long:8, size_t:8
+Input files DNA, FASTA:
+  insert.4.fa
+Building a SMALL index
+Reading reference sizes
+  Time reading reference sizes: 00:00:00
+Calculating joined length
+Writing header
+Reserving space for joined string
+Joining reference sequences
+  Time to join reference sequences: 00:00:00
+bmax according to bmaxDivN setting: 916
+Using parameters --bmax 687 --dcv 1024
+  Doing ahead-of-time memory usage test
+  Passed!  Constructing with these parameters: --bmax 687 --dcv 1024
+Constructing suffix-array element generator
+Building DifferenceCoverSample
+  Building sPrime
+  Building sPrimeOrder
+  V-Sorting samples
+  V-Sorting samples time: 00:00:00
+  Allocating rank array
+  Ranking v-sort output
+  Ranking v-sort output time: 00:00:00
+  Invoking Larsson-Sadakane on ranks
+  Invoking Larsson-Sadakane on ranks time: 00:00:00
+  Sanity-checking and returning
+Building samples
+Reserving space for 12 sample suffixes
+Generating random suffixes
+QSorting 12 sample offsets, eliminating duplicates
+QSorting sample offsets, eliminating duplicates time: 00:00:00
+Multikey QSorting 12 samples
+  (Using difference cover)
+  Multikey QSorting samples time: 00:00:00
+Calculating bucket sizes
+  Binary sorting into buckets
+  10%
+  20%
+  30%
+  40%
+  50%
+  60%
+  70%
+  80%
+  90%
+  100%
+  Binary sorting into buckets time: 00:00:00
+Splitting and merging
+  Splitting and merging time: 00:00:00
+Split 1, merged 7; iterating...
+  Binary sorting into buckets
+  10%
+  20%
+  30%
+  40%
+  50%
+  60%
+  70%
+  80%
+  90%
+  100%
+  Binary sorting into buckets time: 00:00:00
+Splitting and merging
+  Splitting and merging time: 00:00:00
+Split 1, merged 1; iterating...
+  Binary sorting into buckets
+  10%
+  20%
+  30%
+  40%
+  50%
+  60%
+  70%
+  80%
+  90%
+  100%
+  Binary sorting into buckets time: 00:00:00
+Splitting and merging
+  Splitting and merging time: 00:00:00
+Split 1, merged 1; iterating...
+  Binary sorting into buckets
+  10%
+  20%
+  30%
+  40%
+  50%
+  60%
+  70%
+  80%
+  90%
+  100%
+  Binary sorting into buckets time: 00:00:00
+Splitting and merging
+  Splitting and merging time: 00:00:00
+Split 1, merged 1; iterating...
+  Binary sorting into buckets
+  10%
+  20%
+  30%
+  40%
+  50%
+  60%
+  70%
+  80%
+  90%
+  100%
+  Binary sorting into buckets time: 00:00:00
+Splitting and merging
+  Splitting and merging time: 00:00:00
+Avg bucket size: 523 (target: 686)
+Converting suffix-array elements to index image
+Allocating ftab, absorbFtab
+Entering Ebwt loop
+Getting block 1 of 7
+  Reserving size (687) for bucket
+  Calculating Z arrays
+  Calculating Z arrays time: 00:00:00
+  Entering block accumulator loop:
+  10%
+  20%
+  30%
+  40%
+  50%
+  60%
+  70%
+  80%
+  90%
+  100%
+  Block accumulator loop time: 00:00:00
+  Sorting block of length 543
+  (Using difference cover)
+  Sorting block time: 00:00:00
+Returning block of 544
+Getting block 2 of 7
+  Reserving size (687) for bucket
+  Calculating Z arrays
+  Calculating Z arrays time: 00:00:00
+  Entering block accumulator loop:
+  10%
+  20%
+  30%
+  40%
+  50%
+  60%
+  70%
+  80%
+  90%
+  100%
+  Block accumulator loop time: 00:00:00
+  Sorting block of length 575
+  (Using difference cover)
+  Sorting block time: 00:00:00
+Returning block of 576
+Getting block 3 of 7
+  Reserving size (687) for bucket
+  Calculating Z arrays
+  Calculating Z arrays time: 00:00:00
+  Entering block accumulator loop:
+  10%
+  20%
+  30%
+  40%
+  50%
+  60%
+  70%
+  80%
+  90%
+  100%
+  Block accumulator loop time: 00:00:00
+  Sorting block of length 286
+  (Using difference cover)
+  Sorting block time: 00:00:00
+Returning block of 287
+Getting block 4 of 7
+  Reserving size (687) for bucket
+  Calculating Z arrays
+  Calculating Z arrays time: 00:00:00
+  Entering block accumulator loop:
+  10%
+  20%
+  30%
+  40%
+  50%
+  60%
+  70%
+  80%
+  90%
+  100%
+  Block accumulator loop time: 00:00:00
+  Sorting block of length 546
+  (Using difference cover)
+  Sorting block time: 00:00:00
+Returning block of 547
+Getting block 5 of 7
+  Reserving size (687) for bucket
+  Calculating Z arrays
+  Calculating Z arrays time: 00:00:00
+  Entering block accumulator loop:
+  10%
+  20%
+  30%
+  40%
+  50%
+  60%
+  70%
+  80%
+  90%
+  100%
+  Block accumulator loop time: 00:00:00
+  Sorting block of length 628
+  (Using difference cover)
+  Sorting block time: 00:00:00
+Returning block of 629
+Getting block 6 of 7
+  Reserving size (687) for bucket
+  Calculating Z arrays
+  Calculating Z arrays time: 00:00:00
+  Entering block accumulator loop:
+  10%
+  20%
+  30%
+  40%
+  50%
+  60%
+  70%
+  80%
+  90%
+  100%
+  Block accumulator loop time: 00:00:00
+  Sorting block of length 577
+  (Using difference cover)
+  Sorting block time: 00:00:00
+Returning block of 578
+Getting block 7 of 7
+  Reserving size (687) for bucket
+  Calculating Z arrays
+  Calculating Z arrays time: 00:00:00
+  Entering block accumulator loop:
+  10%
+  20%
+  30%
+  40%
+  50%
+  60%
+  70%
+  80%
+  90%
+  100%
+  Block accumulator loop time: 00:00:00
+  Sorting block of length 506
+  (Using difference cover)
+  Sorting block time: 00:00:00
+Returning block of 507
+Exited Ebwt loop
+fchr[A]: 0
+fchr[C]: 871
+fchr[G]: 1759
+fchr[T]: 2676
+fchr[$]: 3667
+Exiting Ebwt::buildToDisk()
+Returning from initFromVector
+Wrote 4195947 bytes to primary EBWT file: 5/ssn.1.bt2
+Wrote 924 bytes to secondary EBWT file: 5/ssn.2.bt2
+Re-opening _in1 and _in2 as input streams
+Returning from Ebwt constructor
+Headers:
+    len: 3667
+    bwtLen: 3668
+    sz: 917
+    bwtSz: 917
+    lineRate: 6
+    offRate: 4
+    offMask: 0xfffffff0
+    ftabChars: 10
+    eftabLen: 20
+    eftabSz: 80
+    ftabLen: 1048577
+    ftabSz: 4194308
+    offsLen: 230
+    offsSz: 920
+    lineSz: 64
+    sideSz: 64
+    sideBwtSz: 48
+    sideBwtLen: 192
+    numSides: 20
+    numLines: 20
+    ebwtTotLen: 1280
+    ebwtTotSz: 1280
+    color: 0
+    reverse: 0
+Total time for call to driver() for forward index: 00:00:00
+Reading reference sizes
+  Time reading reference sizes: 00:00:00
+Calculating joined length
+Writing header
+Reserving space for joined string
+Joining reference sequences
+  Time to join reference sequences: 00:00:00
+  Time to reverse reference sequence: 00:00:00
+bmax according to bmaxDivN setting: 916
+Using parameters --bmax 687 --dcv 1024
+  Doing ahead-of-time memory usage test
+  Passed!  Constructing with these parameters: --bmax 687 --dcv 1024
+Constructing suffix-array element generator
+Building DifferenceCoverSample
+  Building sPrime
+  Building sPrimeOrder
+  V-Sorting samples
+  V-Sorting samples time: 00:00:00
+  Allocating rank array
+  Ranking v-sort output
+  Ranking v-sort output time: 00:00:00
+  Invoking Larsson-Sadakane on ranks
+  Invoking Larsson-Sadakane on ranks time: 00:00:00
+  Sanity-checking and returning
+Building samples
+Reserving space for 12 sample suffixes
+Generating random suffixes
+QSorting 12 sample offsets, eliminating duplicates
+QSorting sample offsets, eliminating duplicates time: 00:00:00
+Multikey QSorting 12 samples
+  (Using difference cover)
+  Multikey QSorting samples time: 00:00:00
+Calculating bucket sizes
+  Binary sorting into buckets
+  10%
+  20%
+  30%
+  40%
+  50%
+  60%
+  70%
+  80%
+  90%
+  100%
+  Binary sorting into buckets time: 00:00:00
+Splitting and merging
+  Splitting and merging time: 00:00:00
+Split 1, merged 6; iterating...
+  Binary sorting into buckets
+  10%
+  20%
+  30%
+  40%
+  50%
+  60%
+  70%
+  80%
+  90%
+  100%
+  Binary sorting into buckets time: 00:00:00
+Splitting and merging
+  Splitting and merging time: 00:00:00
+Split 1, merged 1; iterating...
+  Binary sorting into buckets
+  10%
+  20%
+  30%
+  40%
+  50%
+  60%
+  70%
+  80%
+  90%
+  100%
+  Binary sorting into buckets time: 00:00:00
+Splitting and merging
+  Splitting and merging time: 00:00:00
+Split 1, merged 1; iterating...
+  Binary sorting into buckets
+  10%
+  20%
+  30%
+  40%
+  50%
+  60%
+  70%
+  80%
+  90%
+  100%
+  Binary sorting into buckets time: 00:00:00
+Splitting and merging
+  Splitting and merging time: 00:00:00
+Avg bucket size: 523 (target: 686)
+Converting suffix-array elements to index image
+Allocating ftab, absorbFtab
+Entering Ebwt loop
+Getting block 1 of 7
+  Reserving size (687) for bucket
+  Calculating Z arrays
+  Calculating Z arrays time: 00:00:00
+  Entering block accumulator loop:
+  10%
+  20%
+  30%
+  40%
+  50%
+  60%
+  70%
+  80%
+  90%
+  100%
+  Block accumulator loop time: 00:00:00
+  Sorting block of length 399
+  (Using difference cover)
+  Sorting block time: 00:00:00
+Returning block of 400
+Getting block 2 of 7
+  Reserving size (687) for bucket
+  Calculating Z arrays
+  Calculating Z arrays time: 00:00:00
+  Entering block accumulator loop:
+  10%
+  20%
+  30%
+  40%
+  50%
+  60%
+  70%
+  80%
+  90%
+  100%
+  Block accumulator loop time: 00:00:00
+  Sorting block of length 610
+  (Using difference cover)
+  Sorting block time: 00:00:00
+Returning block of 611
+Getting block 3 of 7
+  Reserving size (687) for bucket
+  Calculating Z arrays
+  Calculating Z arrays time: 00:00:00
+  Entering block accumulator loop:
+  10%
+  20%
+  30%
+  40%
+  50%
+  60%
+  70%
+  80%
+  90%
+  100%
+  Block accumulator loop time: 00:00:00
+  Sorting block of length 335
+  (Using difference cover)
+  Sorting block time: 00:00:00
+Returning block of 336
+Getting block 4 of 7
+  Reserving size (687) for bucket
+  Calculating Z arrays
+  Calculating Z arrays time: 00:00:00
+  Entering block accumulator loop:
+  10%
+  20%
+  30%
+  40%
+  50%
+  60%
+  70%
+  80%
+  90%
+  100%
+  Block accumulator loop time: 00:00:00
+  Sorting block of length 424
+  (Using difference cover)
+  Sorting block time: 00:00:00
+Returning block of 425
+Getting block 5 of 7
+  Reserving size (687) for bucket
+  Calculating Z arrays
+  Calculating Z arrays time: 00:00:00
+  Entering block accumulator loop:
+  10%
+  20%
+  30%
+  40%
+  50%
+  60%
+  70%
+  80%
+  90%
+  100%
+  Block accumulator loop time: 00:00:00
+  Sorting block of length 667
+  (Using difference cover)
+  Sorting block time: 00:00:00
+Returning block of 668
+Getting block 6 of 7
+  Reserving size (687) for bucket
+  Calculating Z arrays
+  Calculating Z arrays time: 00:00:00
+  Entering block accumulator loop:
+  10%
+  20%
+  30%
+  40%
+  50%
+  60%
+  70%
+  80%
+  90%
+  100%
+  Block accumulator loop time: 00:00:00
+  Sorting block of length 624
+  (Using difference cover)
+  Sorting block time: 00:00:00
+Returning block of 625
+Getting block 7 of 7
+  Reserving size (687) for bucket
+  Calculating Z arrays
+  Calculating Z arrays time: 00:00:00
+  Entering block accumulator loop:
+  10%
+  20%
+  30%
+  40%
+  50%
+  60%
+  70%
+  80%
+  90%
+  100%
+  Block accumulator loop time: 00:00:00
+  Sorting block of length 602
+  (Using difference cover)
+  Sorting block time: 00:00:00
+Returning block of 603
+Exited Ebwt loop
+fchr[A]: 0
+fchr[C]: 871
+fchr[G]: 1759
+fchr[T]: 2676
+fchr[$]: 3667
+Exiting Ebwt::buildToDisk()
+Returning from initFromVector
+Wrote 4195947 bytes to primary EBWT file: 5/ssn.rev.1.bt2
+Wrote 924 bytes to secondary EBWT file: 5/ssn.rev.2.bt2
+Re-opening _in1 and _in2 as input streams
+Returning from Ebwt constructor
+Headers:
+    len: 3667
+    bwtLen: 3668
+    sz: 917
+    bwtSz: 917
+    lineRate: 6
+    offRate: 4
+    offMask: 0xfffffff0
+    ftabChars: 10
+    eftabLen: 20
+    eftabSz: 80
+    ftabLen: 1048577
+    ftabSz: 4194308
+    offsLen: 230
+    offsSz: 920
+    lineSz: 64
+    sideSz: 64
+    sideBwtSz: 48
+    sideBwtLen: 192
+    numSides: 20
+    numLines: 20
+    ebwtTotLen: 1280
+    ebwtTotSz: 1280
+    color: 0
+    reverse: 1
+Total time for backward call to driver() for mirror index: 00:00:00
+252494261 reads; of these:
+  252494261 (100.00%) were paired; of these:
+    252487429 (100.00%) aligned concordantly 0 times
+    6822 (0.00%) aligned concordantly exactly 1 time
+    10 (0.00%) aligned concordantly >1 times
+    ----
+    252487429 pairs aligned concordantly 0 times; of these:
+      56 (0.00%) aligned discordantly 1 time
+    ----
+    252487373 pairs aligned 0 times concordantly or discordantly; of these:
+      504974746 mates make up the pairs; of these:
+        504958246 (100.00%) aligned 0 times
+        16460 (0.00%) aligned exactly 1 time
+        40 (0.00%) aligned >1 times
+0.01% overall alignment rate
+252547706 reads; of these:
+  252547706 (100.00%) were paired; of these:
+    252540911 (100.00%) aligned concordantly 0 times
+    6780 (0.00%) aligned concordantly exactly 1 time
+    15 (0.00%) aligned concordantly >1 times
+    ----
+    252540911 pairs aligned concordantly 0 times; of these:
+      59 (0.00%) aligned discordantly 1 time
+    ----
+    252540852 pairs aligned 0 times concordantly or discordantly; of these:
+      505081704 mates make up the pairs; of these:
+        505065209 (100.00%) aligned 0 times
+        16448 (0.00%) aligned exactly 1 time
+        47 (0.00%) aligned >1 times
+0.01% overall alignment rate
+/panfs/roc/itascasoft/openmpi/el6/1.7.2/intel-2013-update5/bin/mpirun -np 6 ABYSS-P -k40 -q3   --coverage-hist=coverage.hist -s ne234-bubbles.fa  -o ne234-1.fa r1.fq r2.fq 
+ABySS 1.5.2
+ABYSS-P -k40 -q3 --coverage-hist=coverage.hist -s ne234-bubbles.fa -o ne234-1.fa r1.fq r2.fq
+Running on 6 processors
+0: Running on host cn0013
+1: Running on host cn0013
+2: Running on host cn0013
+3: Running on host cn0013
+4: Running on host cn0013
+5: Running on host cn0013
+0: Reading `r1.fq'...
+1: Reading `r2.fq'...
+`r2.fq': discarded 18362 reads shorter than 40 bases
+`r2.fq': discarded 29 reads containing non-ACGT characters
+`r1.fq': discarded 10540 reads shorter than 40 bases
+`r1.fq': discarded 2 reads containing non-ACGT characters
+4: Loaded 401451 k-mer.
+5: Loaded 394926 k-mer.
+1: Loaded 396832 k-mer.
+0: Loaded 402320 k-mer.
+2: Loaded 401775 k-mer.
+3: Loaded 396283 k-mer.
+Loaded 2393587 k-mer. At least 57.4 MB of RAM is required.
+Minimum k-mer coverage is 31
+Using a coverage threshold of 1...
+The median k-mer coverage is 1
+The reconstruction is 2393587
+The k-mer coverage threshold is 1
+Setting parameter e (erode) to 2
+Setting parameter E (erodeStrand) to 0
+Setting parameter c (coverage) to 2
+Finding adjacenct k-mer...
+0: Added 799343 edges.
+Added 4753974 edges.
+Eroding tips...
+4: Added 797626 edges.
+5: Added 784225 edges.
+1: Added 787870 edges.
+3: Added 786770 edges.
+2: Added 798140 edges.
+0: Eroded 328579 tips.
+4: Eroded 335297 tips.
+2: Eroded 339260 tips.
+1: Eroded 339970 tips.
+3: Eroded 339367 tips.
+5: Eroded 339174 tips.
+5: Eroded 5471 tips.
+4: Eroded 12522 tips.
+0: Eroded 20584 tips.
+Eroded 2082784 tips.
+3: Eroded 6629 tips.
+2: Eroded 9628 tips.
+1: Eroded 6303 tips.
+Pruning tips shorter than 1 bp...
+0: Pruned 129 tips.
+5: Pruned 71 tips.
+4: Pruned 89 tips.
+1: Pruned 71 tips.
+3: Pruned 94 tips.
+2: Pruned 92 tips.
+Pruned 546 k-mer in 546 tips.
+Pruning tips shorter than 2 bp...
+5: Pruned 110 tips.
+1: Pruned 95 tips.
+3: Pruned 105 tips.
+0: Pruned 77 tips.
+2: Pruned 98 tips.
+4: Pruned 91 tips.
+Pruned 935 k-mer in 576 tips.
+Pruning tips shorter than 4 bp...
+3: Pruned 172 tips.
+5: Pruned 162 tips.
+1: Pruned 175 tips.
+4: Pruned 136 tips.
+0: Pruned 153 tips.
+2: Pruned 178 tips.
+Pruned 2769 k-mer in 976 tips.
+Pruning tips shorter than 8 bp...
+5: Pruned 244 tips.
+1: Pruned 286 tips.
+3: Pruned 264 tips.
+4: Pruned 281 tips.
+2: Pruned 303 tips.
+0: Pruned 283 tips.
+Pruned 8185 k-mer in 1661 tips.
+Pruning tips shorter than 16 bp...
+1: Pruned 268 tips.
+5: Pruned 324 tips.
+3: Pruned 296 tips.
+4: Pruned 321 tips.
+0: Pruned 322 tips.
+2: Pruned 330 tips.
+Pruned 17147 k-mer in 1861 tips.
+Pruning tips shorter than 32 bp...
+1: Pruned 316 tips.
+5: Pruned 296 tips.
+3: Pruned 330 tips.
+2: Pruned 335 tips.
+0: Pruned 348 tips.
+4: Pruned 327 tips.
+Pruned 30735 k-mer in 1952 tips.
+Pruning tips shorter than 40 bp...
+2: Pruned 87 tips.
+1: Pruned 63 tips.
+0: Pruned 75 tips.
+5: Pruned 68 tips.
+4: Pruned 72 tips.
+3: Pruned 71 tips.
+Pruned 10363 k-mer in 436 tips.
+Pruning tips shorter than 40 bp...
+1: Pruned 0 tips.
+2: Pruned 2 tips.
+0: Pruned 3 tips.
+3: Pruned 2 tips.
+5: Pruned 2 tips.
+4: Pruned 1 tips.
+Pruned 129 k-mer in 10 tips.
+Pruning tips shorter than 40 bp...
+5: Pruned 0 tips.
+2: Pruned 0 tips.
+1: Pruned 0 tips.
+0: Pruned 0 tips.
+3: Pruned 1 tips.
+4: Pruned 0 tips.
+Pruned 21 k-mer in 1 tips.
+Pruning tips shorter than 40 bp...
+2: Pruned 0 tips.
+5: Pruned 0 tips.
+0: Pruned 0 tips.
+3: Pruned 0 tips.
+1: Pruned 0 tips.
+4: Pruned 0 tips.
+Pruned 8019 tips in 9 rounds.
+Marking ambiguous branches...
+0: Marked 6333 edges of 2821 ambiguous vertices.
+Marked 16275 ambiguous branches.
+Removing low-coverage contigs (mean k-mer coverage < 2)...
+2: Marked 6496 edges of 2925 ambiguous vertices.
+5: Marked 5660 edges of 2519 ambiguous vertices.
+4: Marked 6529 edges of 2904 ambiguous vertices.
+1: Marked 5745 edges of 2565 ambiguous vertices.
+3: Marked 5737 edges of 2541 ambiguous vertices.
+1: Found 35816 k-mer in 2773 contigs before removing low-coverage contigs.
+Removed 10154 k-mer in 529 low-coverage contigs.
+5: Found 36927 k-mer in 2749 contigs before removing low-coverage contigs.
+Removed 11808 k-mer in 535 low-coverage contigs.
+3: Found 36287 k-mer in 2831 contigs before removing low-coverage contigs.
+Removed 9957 k-mer in 510 low-coverage contigs.
+0: Found 43492 k-mer in 3045 contigs before removing low-coverage contigs.
+Removed 14374 k-mer in 575 low-coverage contigs.
+2: Found 43469 k-mer in 3080 contigs before removing low-coverage contigs.
+Removed 13289 k-mer in 572 low-coverage contigs.
+4: Found 43762 k-mer in 3137 contigs before removing low-coverage contigs.
+Removed 13166 k-mer in 562 low-coverage contigs.
+Found 239753 k-mer in 17615 contigs before removing low-coverage contigs.
+Removed 72748 k-mer in 3283 low-coverage contigs.
+Splitting ambiguous branches...
+0: Split 1057 ambigiuous branches.
+4: Split 1052 ambigiuous branches.
+2: Split 1061 ambigiuous branches.
+3: Split 1041 ambigiuous branches.
+Split 6259 ambiguous branches.
+1: Split 1052 ambigiuous branches.
+5: Split 996 ambigiuous branches.
+Removed 72748 marked k-mer.
+Eroding tips...
+4: Eroded 10 tips.
+0: Eroded 5 tips.
+2: Eroded 8 tips.
+0: Eroded 36 tips.
+Eroded 280 tips.
+3: Eroded 23 tips.
+3: Eroded 33 tips.
+5: Eroded 21 tips.
+5: Eroded 21 tips.
+4: Eroded 32 tips.
+1: Eroded 15 tips.
+1: Eroded 36 tips.
+2: Eroded 40 tips.
+Pruning tips shorter than 1 bp...
+2: Pruned 26 tips.
+3: Pruned 21 tips.
+5: Pruned 23 tips.
+4: Pruned 27 tips.
+0: Pruned 22 tips.
+1: Pruned 24 tips.
+Pruned 143 k-mer in 143 tips.
+Pruning tips shorter than 2 bp...
+1: Pruned 16 tips.
+4: Pruned 14 tips.
+2: Pruned 13 tips.
+3: Pruned 17 tips.
+5: Pruned 17 tips.
+0: Pruned 18 tips.
+Pruned 138 k-mer in 95 tips.
+Pruning tips shorter than 4 bp...
+0: Pruned 28 tips.
+5: Pruned 30 tips.
+1: Pruned 52 tips.
+4: Pruned 32 tips.
+2: Pruned 23 tips.
+3: Pruned 38 tips.
+Pruned 542 k-mer in 203 tips.
+Pruning tips shorter than 8 bp...
+2: Pruned 48 tips.
+0: Pruned 34 tips.
+3: Pruned 42 tips.
+1: Pruned 35 tips.
+5: Pruned 56 tips.
+4: Pruned 39 tips.
+Pruned 1246 k-mer in 254 tips.
+Pruning tips shorter than 16 bp...
+1: Pruned 40 tips.
+3: Pruned 45 tips.
+2: Pruned 39 tips.
+0: Pruned 38 tips.
+4: Pruned 38 tips.
+5: Pruned 36 tips.
+Pruned 2239 k-mer in 236 tips.
+Pruning tips shorter than 32 bp...
+0: Pruned 32 tips.
+2: Pruned 38 tips.
+1: Pruned 43 tips.
+3: Pruned 37 tips.
+5: Pruned 43 tips.
+4: Pruned 40 tips.
+Pruned 4182 k-mer in 233 tips.
+Pruning tips shorter than 40 bp...
+0: Pruned 6 tips.
+3: Pruned 12 tips.
+2: Pruned 10 tips.
+1: Pruned 5 tips.
+4: Pruned 4 tips.
+5: Pruned 9 tips.
+Pruned 1212 k-mer in 46 tips.
+Pruning tips shorter than 40 bp...
+2: Pruned 0 tips.
+1: Pruned 0 tips.
+5: Pruned 0 tips.
+3: Pruned 0 tips.
+0: Pruned 0 tips.
+4: Pruned 0 tips.
+Pruned 1210 tips in 7 rounds.
+Popping bubbles...
+0: Removed 0 bubbles.
+1: Removed 0 bubbles.
+2: Removed 0 bubbles.
+3: Removed 0 bubbles.
+4: Removed 0 bubbles.
+Removed 1 bubbles.
+Removed 1 bubbles.
+Marking ambiguous branches...
+5: Removed 1 bubbles.
+0: Marked 3729 edges of 1631 ambiguous vertices.
+2: Marked 3974 edges of 1764 ambiguous vertices.
+4: Marked 3931 edges of 1734 ambiguous vertices.
+Marked 9596 ambiguous branches.
+Assembling...
+1: Marked 3458 edges of 1509 ambiguous vertices.
+5: Marked 3363 edges of 1465 ambiguous vertices.
+3: Marked 3420 edges of 1493 ambiguous vertices.
+5: Assembled 23051 k-mer in 1539 contigs.
+1: Assembled 24589 k-mer in 1574 contigs.
+3: Assembled 24751 k-mer in 1634 contigs.
+2: Assembled 27979 k-mer in 1775 contigs.
+0: Assembled 28333 k-mer in 1763 contigs.
+4: Assembled 28278 k-mer in 1784 contigs.
+Assembled 156981 k-mer in 10069 contigs.
+Concatenating fasta files to ne234-1.fa
+Concatenating fasta files to ne234-bubbles.fa
+snp-0.fa:0: warning: file is empty
+snp-1.fa:0: warning: file is empty
+snp-2.fa:0: warning: file is empty
+snp-3.fa:0: warning: file is empty
+snp-4.fa:0: warning: file is empty
+Done.
+AdjList   -k40 -m50 ne234-1.fa >ne234-1.adj
+abyss-filtergraph    -k40 -g ne234-2.adj ne234-1.adj >ne234-1.path
+PopBubbles  -j6 -k40  -p0.9  -g ne234-3.adj ne234-1.fa ne234-2.adj >ne234-2.path
+MergeContigs  -k40 -o ne234-3.fa ne234-1.fa ne234-2.adj ne234-2.path
+The minimum coverage of single-end contigs is 2.
+The minimum coverage of merged contigs is 3.18919.
+Consider increasing the coverage threshold parameter, c, to 3.18919.
+awk '!/^>/ {x[">" $1]=1; next} {getline s} $1 in x {print $0 "\n" s}' \
+		ne234-2.path ne234-1.fa >ne234-indel.fa
+ln -sf ne234-3.fa ne234-unitigs.fa
+abyss-map  -j6 -l40    r1.fq r2.fq ne234-3.fa \
+		|abyss-fixmate  -l40  -h ne234-3.hist \
+		|sort -snk3 -k4 \
+		|DistanceEst  -j6 -k40 -l40 -s200 -n1   -o ne234-3.dist ne234-3.hist
+Building the suffix array...
+Building the Burrows-Wheeler transform...
+Building the character occurrence table...
+Mateless       0
+Unaligned  27179  58.2%
+Singleton   7071  15.1%
+FR          9151  19.6%
+RF             0
+FF             3  0.00642%
+Different   3291  7.05%
+Total      46695
+Overlap    -k40 -g ne234-4.adj -o ne234-4.fa ne234-3.fa ne234-3.adj ne234-3.dist
+Overlap: 1
+Scaffold: 6
+No overlap: 4
+Insignificant (<5bp): 0
+Homopolymer: 0
+Motif: 0
+Ambiguous: 0
+SimpleGraph    -j6 -k40 -o ne234-4.path1 ne234-4.adj ne234-3.dist
+Total paths attempted: 42
+Unique path: 6
+No possible paths: 24
+No valid paths: 2
+Repetitive: 0
+Multiple valid paths: 0
+Too many solutions: 0
+Too complex: 10
+
+The minimum number of pairs in a distance estimate is 1.
+The minimum number of pairs used in a path is 1.
+MergePaths   -j6 -k40 -o ne234-4.path2 ne234-4.adj ne234-4.path1
+PathOverlap --assemble   -k40 ne234-4.adj ne234-4.path2 >ne234-4.path3
+cat ne234-3.fa ne234-4.fa \
+		|PathConsensus  -k40 -p0.9 -o ne234-5.path -s ne234-5.fa -g ne234-5.adj - ne234-4.adj ne234-4.path3
+Ambiguous paths: 0
+Merged:          0
+No paths:        0
+Too many paths:  0
+Too complex:     0
+Dissimilar:      0
+cat ne234-3.fa ne234-4.fa ne234-5.fa |MergeContigs  -k40 -o ne234-6.fa - ne234-5.adj ne234-5.path
+The minimum coverage of single-end contigs is 2.
+The minimum coverage of merged contigs is 2.
+ln -sf ne234-6.fa ne234-contigs.fa
+PathOverlap --overlap  --dot -k40 ne234-5.adj ne234-5.path >ne234-6.dot
+ln -sf ne234-6.dot ne234-contigs.dot
+abyss-map  -j6 -l40    r1.fq r2.fq ne234-6.fa \
+		|abyss-fixmate  -l40  -h ne234-6.hist \
+		|sort -snk3 -k4 \
+		|DistanceEst --dot  -j6 -k40 -l40 -s200 -n1   -o ne234-6.dist.dot ne234-6.hist
+Building the suffix array...
+Building the Burrows-Wheeler transform...
+Building the character occurrence table...
+Mateless       0
+Unaligned  27179  58.2%
+Singleton   7071  15.1%
+FR          9184  19.7%
+RF             0
+FF             3  0.00642%
+Different   3258  6.98%
+Total      46695
+abyss-scaffold   -k40 -s200 -n1 -g ne234-6.path.dot  ne234-6.dot ne234-6.dist.dot >ne234-6.path
+n	n:200	n:N50	min	N80	N50	N20	E-size	max	sum	name
+7158	39	11	200	229	356	689	815	2763	13904
+PathConsensus  -k40 -p0.9 -s ne234-7.fa -g ne234-7.adj -o ne234-7.path ne234-6.fa ne234-6.dot ne234-6.path
+Ambiguous paths: 3
+Merged:          2
+No paths:        0
+Too many paths:  0
+Too complex:     1
+Dissimilar:      0
+cat ne234-6.fa ne234-7.fa \
+		|MergeContigs  -k40 -o ne234-8.fa - ne234-7.adj ne234-7.path
+The minimum coverage of single-end contigs is 1.83801.
+The minimum coverage of merged contigs is 4.92578.
+Consider increasing the coverage threshold parameter, c, to 4.92578.
+ln -sf ne234-8.fa ne234-scaffolds.fa
+PathOverlap --overlap  --dot -k40 ne234-7.adj ne234-7.path >ne234-8.dot
+ln -sf ne234-8.dot ne234-scaffolds.dot
+abyss-fac  ne234-unitigs.fa ne234-contigs.fa ne234-scaffolds.fa |tee ne234-stats.tab
+n	n:500	n:N50	min	N80	N50	N20	E-size	max	sum	name
+7168	2	1	518	2215	2215	2215	1893	2215	2733	ne234-unitigs.fa
+7161	2	1	518	2215	2215	2215	1893	2215	2733	ne234-contigs.fa
+7158	2	1	518	2763	2763	2763	2408	2763	3281	ne234-scaffolds.fa
+ln -sf ne234-stats.tab ne234-stats
+tr '\t' , <ne234-stats.tab >ne234-stats.csv
+abyss-tabtomd ne234-stats.tab >ne234-stats.md
+Parameters:
+QualTrim: 0
+QualFilter: no filtering
+HardClip: 0
+Min length: 40
+Sample freq: 1
+PE Mode: 1
+Quality scaling: 2
+MinGC: 0
+MaxGC: 1
+Outfile: bb.fastq
+Orphan file: none
+Discarding sequences with ambiguous bases
+Processing pe files r1.fq, r2.fq
+
+Preprocess stats:
+Reads parsed:	93390
+Reads kept:	40478 (0.43343)
+Reads failed primer screen:	0 (0)
+Bases parsed:	6610606
+Bases kept:	3158726 (0.477827)
+Number of incorrectly paired reads that were discarded: 0
+[timer - sga preprocess] wall clock: 0.29s CPU: 0.24s
+[timer - sga index] wall clock: 0.65s CPU: 1.33s
+Building index for bb.fastq in memory using ropebwt
+	 done bwt construction, generating .sai file
+Correcting sequencing errors for bb.fastq
+Learning kmer parameters
+Kmer coverage histogram
+cov	count
+1	123202
+2	60606
+3	18171
+4	15798
+5	8792
+6	8452
+7	6026
+8	5555
+9	4554
+10	3770
+11	2983
+12	2629
+13	2902
+14	2250
+15	2038
+16	2065
+17	1989
+18	1825
+19	1784
+20	1451
+21	1412
+22	1267
+23	1161
+24	956
+25	1014
+26	1132
+27	1292
+28	1133
+29	825
+30	927
+31	1023
+32	1422
+33	1036
+34	1183
+35	1084
+36	1122
+37	766
+38	828
+39	783
+40	1023
+41	1501
+42	1149
+43	984
+44	750
+45	1167
+46	1216
+47	1203
+48	1429
+49	1231
+50	1205
+51	1165
+52	1218
+53	1410
+54	995
+55	944
+56	1236
+57	1083
+58	842
+59	839
+60	638
+61	693
+62	610
+63	711
+64	879
+65	945
+66	776
+67	937
+68	1066
+69	934
+70	966
+71	1262
+72	1008
+73	1085
+74	711
+75	791
+>75	53671
+Trusted kmer mode: 5
+Chosen kmer threshold: 3
+Proportion of kmer density right of threshold: 0.47184
+[sga correct] Warning: Proportion of kmers greater than the chosen threshold is less than 0.75 (0.47184)
+[sga correct] This can indicate your chosen kmer size is too large or your data is too low coverage to reliably correct
+[sga correct] It is suggest to lower the kmer size and/or choose the threshold manually
+[timer - sga::correct] wall clock: 3.95s CPU: 29.44s
+
+RLBWT info:
+Large Sample rate: 8192
+Small Sample rate: 128
+Contains 3199204 symbols in 873795 runs (3.6613 symbols per run)
+Marker Memory -- Small Markers: 299940 (0.3 MB) Large Markers: 18816 (0.0 MB)
+Total Memory -- Markers: 318756 (0.3 MB) Str: 873795 (0.8 MB) Misc: 152 Total: 1192703 (1.137450 MB)
+N: 3199204 Bytes per symbol: 0.372812
+
+[sga::process] processed 40478 sequences in 3.949093s (10249.948532 sequences/s)
+Reads passed kmer QC check: 24129
+Reads passed overlap QC check: 0
+Reads failed QC: 16349
+[timer - sga index] wall clock: 0.85s CPU: 1.28s
+Building index for reads.ec.k40.fastq in memory using ropebwt
+	 done bwt construction, generating .sai file
+	 done rbwt construction, generating .rsai file
+[timer - sga::filter] wall clock: 0.58s CPU: 1.32s
+
+RLBWT info:
+Large Sample rate: 8192
+Small Sample rate: 128
+Contains 1686592 symbols in 243297 runs (6.9322 symbols per run)
+Marker Memory -- Small Markers: 158136 (0.2 MB) Large Markers: 9936 (0.0 MB)
+Total Memory -- Markers: 168072 (0.2 MB) Str: 243297 (0.2 MB) Misc: 152 Total: 411521 (0.392457 MB)
+N: 1686592 Bytes per symbol: 0.243996
+
+[sga::process] processed 24129 sequences in 0.165278s (145990.391946 sequences/s)
+Reads kept: 4947
+Reads discarded: 19182
+Reads failed kmer check: 2113
+Reads failed duplicate check: 17068
+Reads failed homopolymer check: 0
+Reads failed degenerate check: 1
+[sga::process] processed 19182 sequences in 0.061619s (311300.086012 sequences/s)
+[sga::process] processed 19182 sequences in 0.058176s (329723.597360 sequences/s)
+[timer - sga::fm-merge] wall clock: 0.19s CPU: 0.67s
+
+RLBWT info:
+Large Sample rate: 8192
+Small Sample rate: 128
+Contains 442944 symbols in 65907 runs (6.7207 symbols per run)
+Marker Memory -- Small Markers: 41544 (0.0 MB) Large Markers: 2688 (0.0 MB)
+Total Memory -- Markers: 44232 (0.0 MB) Str: 65907 (0.1 MB) Misc: 152 Total: 110291 (0.105182 MB)
+N: 442944 Bytes per symbol: 0.248995
+
+[sga::fm-merge] starting parallel-mode read merging computation with 8 threads
+[sga::process] processed 4947 sequences in 0.178722s (27679.860342 sequences/s)
+[sga fm-merge] Merged 4947 reads into 3532 sequences
+[sga fm-merge] Reduction factor: 1.400623
+[sga fm-merge] Mean merged size: 79.611835
+[timer - SuffixArray Construction] wall clock: 0.03s CPU: 0.03s
+[timer - SuffixArray Construction] wall clock: 0.03s CPU: 0.03s
+[timer - sga index] wall clock: 0.13s CPU: 0.09s
+Building index for merged.k40.fa on disk
+initializing SA
+[saca] calling mkqs on 84883 suffixes 0.298127 using 1 threads 
+[saca] mkqs finished
+initializing SA
+[saca] calling mkqs on 84883 suffixes 0.298127 using 1 threads 
+[saca] mkqs finished
+[timer - sga::rmdup] wall clock: 0.08s CPU: 0.12s
+[timer - sga rmdup] wall clock: 0.20s CPU: 0.20s
+[sga::rmdup] starting parallel-mode overlap computation with 8 threads
+[sga::process] processed 3532 sequences in 0.042300s (83498.817967 sequences/s)
+Opening merged.k40-thread0.rmhits.gz
+Opening merged.k40-thread1.rmhits.gz
+Opening merged.k40-thread2.rmhits.gz
+Opening merged.k40-thread3.rmhits.gz
+Opening merged.k40-thread4.rmhits.gz
+Opening merged.k40-thread5.rmhits.gz
+Opening merged.k40-thread6.rmhits.gz
+Opening merged.k40-thread7.rmhits.gz
+[sga::rmdup] Removed 0 substring reads
+[sga::rmdup] Removed 0 identical reads
+[sga::rmdup] Kept 3532 reads
+Rebuilding indices without duplicated reads
+[sga] Processed 0 sequences in 0.000589s (0.000000 sequences/s)
+[sga::process] processed 0 sequences in 0.000916s (0.000000 sequences/s)
+[sga] Processed 0 sequences in 0.000563s (0.000000 sequences/s)
+[sga::process] processed 0 sequences in 0.000856s (0.000000 sequences/s)
+[timer - sga::overlap] wall clock: 0.18s CPU: 0.29s
+
+RLBWT info:
+Large Sample rate: 8192
+Small Sample rate: 128
+Contains 284721 symbols in 50225 runs (5.6689 symbols per run)
+Marker Memory -- Small Markers: 26712 (0.0 MB) Large Markers: 1728 (0.0 MB)
+Total Memory -- Markers: 28440 (0.0 MB) Str: 50225 (0.0 MB) Misc: 152 Total: 78817 (0.075166 MB)
+N: 284721 Bytes per symbol: 0.276822
+
+[sga::overlap] starting parallel-mode overlap computation with 8 threads
+[sga::process] processed 3532 sequences in 0.105715s (33410.585064 sequences/s)
+[sga::overlap] parsing file merged.k40.rmdup-thread0.hits.gz
+[sga::overlap] parsing file merged.k40.rmdup-thread1.hits.gz
+[sga::overlap] parsing file merged.k40.rmdup-thread2.hits.gz
+[sga::overlap] parsing file merged.k40.rmdup-thread3.hits.gz
+[sga::overlap] parsing file merged.k40.rmdup-thread4.hits.gz
+[sga::overlap] parsing file merged.k40.rmdup-thread5.hits.gz
+[sga::overlap] parsing file merged.k40.rmdup-thread6.hits.gz
+[sga::overlap] parsing file merged.k40.rmdup-thread7.hits.gz
+Deleted edges for 0 super repetitive vertices
+Warning: removed 0 duplicate edges
+[timer - sga assemble] wall clock: 0.04s CPU: 0.02s
+[timer - sga assemble] wall clock: 0.04s CPU: 0.02s
+Vertices: 3532 Edges: 2620 Islands: 2590 Tips: 796 Monobranch: 531 Dibranch: 26 Simple: 467
+num verts: 3532 using 403471 bytes (114.23 per vert)
+num edges: 2620 using 83840 bytes (32.00 per edge)
+total: 487311
+[Stats] Input graph:
+Vertices: 3532 Edges: 2620 Islands: 2590 Tips: 796 Monobranch: 531 Dibranch: 26 Simple: 467
+Removing contained vertices from graph
+[Stats] After removing contained vertices:
+Vertices: 3532 Edges: 2620 Islands: 2590 Tips: 796 Monobranch: 531 Dibranch: 26 Simple: 467
+Trimming bad vertices
+StringGraphTrim: Removed 2590 island and 793 dead-end short vertices
+StringGraphTrim: Removed 58 island and 65 dead-end short vertices
+StringGraphTrim: Removed 6 island and 8 dead-end short vertices
+StringGraphTrim: Removed 0 island and 0 dead-end short vertices
+StringGraphTrim: Removed 0 island and 0 dead-end short vertices
+StringGraphTrim: Removed 0 island and 0 dead-end short vertices
+StringGraphTrim: Removed 0 island and 0 dead-end short vertices
+StringGraphTrim: Removed 0 island and 0 dead-end short vertices
+StringGraphTrim: Removed 0 island and 0 dead-end short vertices
+StringGraphTrim: Removed 0 island and 0 dead-end short vertices
+
+[Stats] Graph after trimming:
+Vertices: 12 Edges: 26 Islands: 0 Tips: 3 Monobranch: 5 Dibranch: 0 Simple: 11
+Resolving small repeats
+
+[Stats] After small repeat resolution:
+Vertices: 12 Edges: 26 Islands: 0 Tips: 3 Monobranch: 5 Dibranch: 0 Simple: 11
+
+Performing variation smoothing
+VariationSmoother: Removed 0 simple and 0 complex bubbles
+VariationSmoother: Removed 0 simple and 0 complex bubbles
+VariationSmoother: Removed 0 simple and 0 complex bubbles
+
+[Stats] Final graph:
+Vertices: 9 Edges: 20 Islands: 0 Tips: 3 Monobranch: 3 Dibranch: 1 Simple: 7
+/var/spool/torque/mom_priv/jobs/431205.mesabim3.msi.umn.edu.SC: line 88: /home/fahrenkr/zangx020/work/devel/sga/src/bin/sga-align: No such file or directory
+/var/spool/torque/mom_priv/jobs/431205.mesabim3.msi.umn.edu.SC: line 91: /home/fahrenkr/zangx020/work/devel/sga/src/bin/sga-bam2de.pl: No such file or directory
+/var/spool/torque/mom_priv/jobs/431205.mesabim3.msi.umn.edu.SC: line 94: /home/fahrenkr/zangx020/work/devel/sga/src/bin/sga-astat.py: No such file or directory
+Reading distance estimates from libPE.de
+Error: could not open libPE.de for read
+Graph best: 0
+Graph unique: 1
+Find overlaps: 4
+Deleted edges for 0 super repetitive vertices
+Warning: removed 2 duplicate edges
+Vertices: 9 Edges: 20 Islands: 0 Tips: 3 Monobranch: 3 Dibranch: 1 Simple: 7
+Num scaffolds: 0
+Num gaps attempted: 0
+Num gaps resolved: 0
+Num gaps resolved by graph walk: 0
+Num graph walks failed because of too many solutions: 0
+Num graph walks failed because of no path: 0
+Num gaps resolved by overlap: 0
+Num overlaps failed: 0

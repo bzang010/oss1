@@ -1,0 +1,14 @@
+### STAR   --runMode genomeGenerate   --runThreadN 1   --genomeDir /home/fahrenkr/zangx020/genome_ossabaw/trimmed/starindex   --genomeFastaFiles ref_internal.fa      --genomeSAindexNbases 4
+versionGenome	20201
+genomeFastaFiles	ref_internal.fa 
+genomeSAindexNbases	4
+genomeChrBinNbits	18
+genomeSAsparseD	1
+sjdbOverhang	100
+sjdbFileChrStartEnd	- 
+sjdbGTFfile	-
+sjdbGTFchrPrefix	-
+sjdbGTFfeatureExon	exon
+sjdbGTFtagExonParentTranscript	transcript_id
+sjdbGTFtagExonParentGene	gene_id
+sjdbInsertSave	Basic

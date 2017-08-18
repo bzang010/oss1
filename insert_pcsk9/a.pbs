@@ -1,0 +1,116 @@
+#!/bin/bash -l
+#PBS -l nodes=1:ppn=6,mem=20gb,walltime=12:00:00
+#PBS -m abe
+#PBS -M bzang@umn.edu
+
+
+# require insert.0.fa
+
+cd /home/fahrenkr/zangx020/genome_ossabaw/trimmed
+
+
+module load bowtie2
+module load abyss
+module load sga
+
+f1=1513_NoIndex_L007_R1_001_val_1.fq
+f2=1513_NoIndex_L007_R2_001_val_2.fq
+f3=1513_NoIndex_L008_R1_001_val_1.fq
+f4=1513_NoIndex_L008_R2_001_val_2.fq
+
+
+for i in 1 2 3 4 5 6 7
+do
+   
+	output_dir=$i
+
+
+	
+		mkdir $output_dir 
+
+
+			let "j=$i-1"
+			current_insert=insert.$j.fa
+		bowtie2-build -f $current_insert $output_dir/ssn >$output_dir/log.txt 2>&1 
+
+		bowtie2 -p 6 -x $output_dir/ssn -1 $f1 -2 $f2 -S $output_dir/007Aligned.out.sam --no-unal --no-hd --no-sq   >>$output_dir/log.txt 2>&1 
+		bowtie2 -p 6 -x $output_dir/ssn -1 $f3 -2 $f4 -S $output_dir/008Aligned.out.sam --no-unal --no-hd --no-sq   >>$output_dir/log.txt 2>&1 
+
+		cut -f1 $output_dir/007Aligned.out.sam > $output_dir/idsa8.txt
+		awk '{print $0}' $output_dir/idsa8.txt > $output_dir/idsaa8.txt
+		sort $output_dir/idsaa8.txt |uniq > $output_dir/idsa18.txt
+		LC_ALL=C fgrep -A3 --no-group-separator  -f $output_dir/idsa18.txt 1513_NoIndex_L007_R1_001_val_1.fq > $output_dir/a18.fq
+		LC_ALL=C fgrep -A3 --no-group-separator  -f $output_dir/idsa18.txt 1513_NoIndex_L007_R2_001_val_2.fq > $output_dir/a28.fq
+
+		cut -f1 $output_dir/008Aligned.out.sam > $output_dir/idsa8.txt
+		awk '{print $0}' $output_dir/idsa8.txt > $output_dir/idsaa8.txt
+		sort $output_dir/idsaa8.txt |uniq > $output_dir/idsa18.txt
+		LC_ALL=C fgrep -A3 --no-group-separator  -f $output_dir/idsa18.txt 1513_NoIndex_L008_R1_001_val_1.fq > $output_dir/b18.fq
+		LC_ALL=C fgrep -A3 --no-group-separator  -f $output_dir/idsa18.txt 1513_NoIndex_L008_R2_001_val_2.fq > $output_dir/b28.fq
+
+
+		cat $output_dir/a18.fq $output_dir/b18.fq > $output_dir/r1.fq
+		cat $output_dir/a28.fq $output_dir/b28.fq > $output_dir/r2.fq
+
+		pushd $output_dir
+		abyss-pe k=40 n=1 in='r1.fq r2.fq' name=ne234  >>log.txt 2>&1 
+
+		IN1=r1.fq
+		IN2=r2.fq
+
+		SGA_BIN=sga
+		OL=20
+		CPU=8
+		D=4000000
+		CK=40
+		COV_FILTER=2
+		MOL=55
+		R=10
+		MIN_PAIRS=1
+		MIN_LENGTH=100
+		SCAFFOLD_TOLERANCE=1
+		MAX_GAP_DIFF=0
+
+		$SGA_BIN preprocess --pe-mode 1 -o bb.fastq $IN1 $IN2  >>log.txt 2>&1 
+		$SGA_BIN index -a ropebwt -t $CPU --no-reverse bb.fastq  >>log.txt 2>&1 
+		$SGA_BIN correct -k $CK --discard --learn -t $CPU -o reads.ec.k$CK.fastq bb.fastq >>log.txt 2>&1 
+		$SGA_BIN index -a ropebwt -t $CPU reads.ec.k$CK.fastq >>log.txt 2>&1 
+		$SGA_BIN filter -x $COV_FILTER -t $CPU --homopolymer-check --low-complexity-check reads.ec.k$CK.fastq >>log.txt 2>&1 
+		$SGA_BIN fm-merge -m $MOL -t $CPU -o merged.k$CK.fa reads.ec.k$CK.filter.pass.fa >>log.txt 2>&1 
+		$SGA_BIN index -d 1000000 -t $CPU merged.k$CK.fa >>log.txt 2>&1 
+		$SGA_BIN rmdup -t $CPU merged.k$CK.fa >>log.txt 2>&1 
+		$SGA_BIN overlap -m $MOL -t $CPU merged.k$CK.rmdup.fa >>log.txt 2>&1 
+		$SGA_BIN assemble -m $OL -g $MAX_GAP_DIFF -r $R -o assemble.m$OL merged.k$CK.rmdup.asqg.gz >>log.txt 2>&1 
+		CTGS=assemble.m$OL-contigs.fa
+		GRAPH=assemble.m$OL-graph.asqg.gz
+		~/work/devel/sga/src/bin/sga-align --name celegans.pe $CTGS $IN1 $IN2  >>log.txt 2>&1 
+
+		# Make contig-contig distance estimates
+		~/work/devel/sga/src/bin/sga-bam2de.pl -n $MIN_PAIRS --prefix libPE celegans.pe.bam  >>log.txt 2>&1 
+
+		# Make contig copy number estimates
+		~/work/devel/sga/src/bin/sga-astat.py -m $MIN_LENGTH celegans.pe.refsort.bam > libPE.astat  >>log.txt 2>&1 
+
+		$SGA_BIN scaffold -m $MIN_LENGTH --pe libPE.de -a libPE.astat -o scaffolds.n$MIN_PAIRS.scaf $CTGS  >>log.txt 2>&1 
+		$SGA_BIN scaffold2fasta -m $MIN_LENGTH -a $GRAPH -o scaffolds.n$MIN_PAIRS.fa -d $SCAFFOLD_TOLERANCE --use-overlap --write-unplaced scaffolds.n$MIN_PAIRS.scaf   >>log.txt 2>&1 
+
+
+		popd
+
+
+		cp $output_dir/scaffolds.n$MIN_PAIRS.fa insert.$i.fa
+
+
+done
+
+
+
+
+#module load lastz
+#lastz $output_dir/scaffolds.n1.fa[unmask] insert.fa[unmask] > $output_dir/_1.txt
+
+
+#module load bioperl
+#perl a.pl $output_dir
+
+#lastz  $output_dir/mg.fa[unmask] testSeq.fa[unmask] --format=general:score,identity
